@@ -1,0 +1,114 @@
+:root {
+    --purple-primary: #9D4EDD;
+    --purple-light: #C77DFF;
+    --purple-dark: #7B2CBF;
+    --purple-extra-dark: #3C096C;
+    --purple-gradient: linear-gradient(90deg, #9D4EDD, #C77DFF);
+    --purple-gradient-reversed: linear-gradient(90deg, #C77DFF, #9D4EDD);
+    --purple-gradient-enhanced: linear-gradient(90deg, #9D4EDD, #C77DFF, #9D4EDD);
+    --pink-primary: #FF69B4;
+    --pink-light: #FFC0CB;
+    --pink-dark: #C71585;
+}
+
+/* Text colors */
+.text-purple {
+    color: var(--purple-primary);
+}
+
+.text-purple-light {
+    color: var(--purple-light);
+}
+
+.text-purple-dark {
+    color: var(--purple-dark);
+}
+
+.text-pink {
+    color: var(--pink-primary);
+}
+
+.text-pink-light {
+    color: var(--pink-light);
+}
+
+.text-pink-dark {
+    color: var(--pink-dark);
+}
+
+.text-gradient-purple {
+    background: var(--purple-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+}
+
+/* Background styles */
+.bg-gradient-purple {
+    background: var(--purple-gradient);
+}
+
+.bg-dark-gradient {
+    background: linear-gradient(135deg, #0a0a0f, #1a1a2e);
+}
+
+/* Button styles */
+.btn-purple {
+    background-color: var(--purple-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-purple:hover {
+    background-color: var(--purple-dark);
+}
+
+.btn-pink {
+    background-color: var(--pink-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-pink:hover {
+    background-color: var(--pink-dark);
+}
+
+/* Outline buttons */
+.btn-outline-purple {
+    background-color: transparent;
+    color: var(--purple-primary);
+    border: 2px solid var(--purple-primary);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-outline-purple:hover {
+    background-color: var(--purple-primary);
+    color: white;
+}
+
+.btn-outline-pink {
+    background-color: transparent;
+    color: var(--pink-primary);
+    border: 2px solid var(--pink-primary);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-outline-pink:hover {
+    background-color: var(--pink-primary);
+    color: white;
+}

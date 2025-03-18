@@ -1,0 +1,139 @@
+.footer {
+    background: rgba(15, 15, 20, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 3rem 0 1.5rem;
+    border-top: 1px solid rgba(157, 78, 221, 0.15);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2),
+        0 -5px 15px rgba(157, 78, 221, 0.05);
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.03),
+            rgba(157, 78, 221, 0.2),
+            rgba(255, 255, 255, 0.03));
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--purple-primary), var(--pink-primary));
+    bottom: -8px;
+    left: 0;
+    border-radius: 2px;
+}
+
+.links {
+    display: flex;
+    gap: 3rem;
+}
+
+.linkGroup h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    color: var(--purple-light);
+    position: relative;
+}
+
+.linkGroup h3::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--purple-primary), var(--pink-primary));
+    bottom: -5px;
+    left: 0;
+    border-radius: 2px;
+}
+
+.linkGroup ul {
+    list-style: none;
+    padding: 0;
+}
+
+.linkGroup li {
+    margin-bottom: 0.8rem;
+}
+
+.linkGroup a {
+    color: #d0d0d0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.linkGroup a:hover {
+    color: var(--purple-light);
+    transform: translateX(5px);
+}
+
+.linkGroup a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, var(--purple-primary), transparent);
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.linkGroup a:hover::before {
+    width: 100%;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #a0a0a0;
+    font-size: 0.9rem;
+}
+
+.copyright p {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

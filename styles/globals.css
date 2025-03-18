@@ -1,0 +1,144 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #0a0a0f;
+    background-image: radial-gradient(circle at top right, rgba(100, 43, 150, 0.3), transparent 80%),
+        radial-gradient(circle at bottom left, rgba(120, 50, 180, 0.3), transparent 80%);
+    color: #ffffff;
+}
+
+/* Enhanced Glassmorphism Effect */
+.glassCard {
+    background: rgba(30, 30, 40, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid rgba(157, 78, 221, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        box-shadow 0.4s ease;
+}
+
+.glassCard:hover {
+    transform: translateY(-10px) rotateX(3deg);
+    box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.5),
+        0 5px 15px 0 rgba(157, 78, 221, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.glassCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.03),
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.03));
+}
+
+/* 3D Button Effect */
+.btn-3d {
+    position: relative;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.btn-3d:active {
+    transform: translateY(2px);
+}
+
+.btn-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0) 50%);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.btn-3d:hover::before {
+    transform: translateY(-100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: #64FFDA;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* For custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f0f10;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(90deg, #9D4EDD, #C77DFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+}
+
+.gradient-heading {
+    background: linear-gradient(90deg, #9D4EDD, #7B2CBF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation for elements */
+.fadeIn {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,221 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+    background: rgba(15, 15, 20, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(157, 78, 221, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.scrolled {
+    background: rgba(15, 15, 20, 0.85);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5),
+        0 4px 10px rgba(157, 78, 221, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks li {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Button Styles - More Rounded Design */
+.navButton {
+    position: relative;
+    display: inline-flex;
+    height: 2.5rem;
+    overflow: visible;
+    border-radius: 20px;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.navButton:hover {
+    transform: translateY(-2px);
+}
+
+.navButton:focus {
+    outline: none;
+}
+
+.buttonBorder {
+    position: absolute;
+    inset: -2px;
+    border-radius: 22px;
+    background: linear-gradient(45deg, #9d4edd, #7b2cbf, #5a189a);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.navButton:hover .buttonBorder {
+    opacity: 1;
+    animation: pulse 1.5s infinite;
+}
+
+.buttonContent {
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: rgba(25, 25, 35, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 0 1.25rem;
+    color: #f0f0f0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(157, 78, 221, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.navButton:hover .buttonContent {
+    color: white;
+    border-color: rgba(157, 78, 221, 0.6);
+    background: rgba(40, 40, 50, 0.8);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15),
+        0 0 10px rgba(157, 78, 221, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+@keyframes pulse {
+    0% {
+        filter: blur(8px);
+    }
+
+    50% {
+        filter: blur(12px);
+    }
+
+    100% {
+        filter: blur(8px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.navLinks a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navLinks a:hover {
+    color: var(--purple-primary);
+}
+
+.navLinks a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, var(--purple-primary), var(--pink-primary));
+    transition: width 0.3s ease;
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(157, 78, 221, 0.5);
+}
+
+.navLinks a:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #f0f0f0;
+    margin: 2px 0;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        z-index: 101;
+    }
+
+    .navLinks {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(15, 15, 20, 0.9);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        flex-direction: column;
+        align-items: center;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+        border-bottom: 1px solid rgba(157, 78, 221, 0.15);
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    .navLinks.active {
+        height: 300px;
+        padding: 1rem 0;
+    }
+
+    .navLinks li {
+        margin: 0.75rem 0;
+    }
+
+    .navButton {
+        width: 150px;
+    }
+}
