@@ -5,7 +5,7 @@ const Hero = () => {
         <section id="home" className={styles.hero}>
             <div className={styles.content}>
                 <h1 className="fadeIn">
-                    <span>Hello, I'm</span>
+                    <span>Hello, I&apos;m</span>
                     <span className="gradient-text"> Your Name</span>
                 </h1>
                 <h2 className={`${styles.subtitle} fadeIn`}>

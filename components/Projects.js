@@ -1,4 +1,5 @@
 import styles from '../styles/Projects.module.css';
+import Image from 'next/image';
 
 const Projects = () => {
     const projects = [
@@ -43,7 +44,13 @@ const Projects = () => {
                 {projects.map((project, index) => (
                     <div className={`${styles.projectCard} glassCard`} key={index}>
                         <div className={styles.projectImage}>
-                            <img src={project.image || '/placeholder.jpg'} alt={project.title} />
+                            <Image
+                                src={project.image || '/placeholder.jpg'}
+                                alt={project.title}
+                                width={500}
+                                height={250}
+                                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                            />
                         </div>
                         <div className={styles.projectInfo}>
                             <h3>{project.title}</h3>

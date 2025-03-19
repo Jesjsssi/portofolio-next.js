@@ -8,17 +8,17 @@ const About = () => {
                 <div className={`${styles.card} glassCard`}>
                     <div className={styles.info}>
                         <p>
-                            Hello! I'm a passionate web developer with a strong focus on creating beautiful,
+                            Hello! I&apos;m a passionate web developer with a strong focus on creating beautiful,
                             functional, and user-friendly websites. With expertise in modern frontend frameworks
                             and backend technologies, I create immersive digital experiences.
                         </p>
                         <p>
                             My journey in web development started several years ago, and since then,
-                            I've worked on numerous projects ranging from simple landing pages to
+                            I&apos;ve worked on numerous projects ranging from simple landing pages to
                             complex web applications. I love solving problems and turning ideas into reality.
                         </p>
                         <p>
-                            When I'm not coding, you can find me exploring new technologies, contributing to
+                            When I&apos;m not coding, you can find me exploring new technologies, contributing to
                             open-source projects, or enjoying outdoor activities.
                         </p>
                     </div>
